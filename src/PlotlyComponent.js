@@ -67,8 +67,7 @@ var createPlotlyComponent = function createPlotlyComponent(plotlyInstance) {
         plotlyInstance.deleteTraces(this.container, 0);
         plotlyInstance.addTraces(this.container, update, 0);
 
-      } else if (prevProps.layout !== this.props.layout || prevProps.config !== this.props.config) {
-        console.info(' layout/config changed')
+      } else if (this.props.update) {
         var _props2 = this.props,
           data = _props2.data,
           layout = _props2.layout,
