@@ -58,7 +58,8 @@ var createPlotlyComponent = function createPlotlyComponent(plotlyInstance) {
       if (prevProps.data !== this.props.data) {
         var update = {
           x: this.props.data[0].x,
-          y: this.props.data[0].y
+          y: this.props.data[0].y,
+          mode: 'markers'
         };
         let updateIndex = [];
         for (let i = 0; i < this.props.data[0].x.length; i++) {
